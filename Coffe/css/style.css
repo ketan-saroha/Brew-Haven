@@ -1,0 +1,169 @@
+/* Global Styles */
+:root {
+  --coffee-dark: #3e2723;
+  --coffee-medium: #5d4037;
+  --coffee-light: #8b6b61;
+  --cream: #f5e6d3;
+  --beige: #efd9c6;
+  --gold: #c7a252;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #faf3e8;
+  color: var(--coffee-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(62, 39, 35, 0.9) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+.nav-link {
+  color: var(--cream) !important;
+  transition: color 0.3s;
+}
+.nav-link:hover, .nav-link.active {
+  color: var(--gold) !important;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+  color: white;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--gold);
+  border: none;
+  color: var(--coffee-dark);
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+.btn-primary:hover {
+  background-color: #b38f4a;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(199, 162, 82, 0.6);
+}
+.btn-outline-warning {
+  border-color: var(--gold);
+  color: var(--coffee-dark);
+}
+.btn-outline-warning:hover {
+  background-color: var(--gold);
+  border-color: var(--gold);
+  color: white;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.glass-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+}
+.card-img-top {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Section Titles */
+.section-title {
+  position: relative;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--gold);
+  margin: 10px auto;
+}
+
+/* Footer */
+footer {
+  background-color: var(--coffee-dark);
+  color: var(--cream);
+}
+footer a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+footer a:hover {
+  color: var(--gold) !important;
+}
+
+/* Gallery Images */
+.gallery-img {
+  cursor: pointer;
+  transition: transform 0.3s, filter 0.3s;
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+}
+.gallery-img:hover {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
+
+/* Fade-in animation for scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Offer Banner */
+.offer-banner {
+  background: linear-gradient(135deg, var(--coffee-dark), var(--coffee-light));
+  color: var(--cream);
+}
+
+/* Filter Buttons */
+.filter-btn.active {
+  background-color: var(--gold);
+  color: white;
+  border-color: var(--gold);
+}
+
+/* Timeline cards */
+.timeline .card {
+  background: var(--beige);
+  border: none;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
